@@ -21,11 +21,11 @@ mongoose.connect(config.uri,{ useMongoClient: true }, (err) => {
 app.use( cors({ origin: 'https://shrouded-forest-43181.herokuapp.com/' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + 'build/'));
+app.use(express.static(__dirname + '/build'));
 app.use('/blogs', blogs);
 
 app.get( '/*', (req, res) => {
-    res.sendFile( path.join(__dirname + 'build/index.html'));
+    res.sendFile( path.join(__dirname + '/build/index.html'));
 });
 
 app.listen( port, () => {
