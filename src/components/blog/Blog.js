@@ -75,6 +75,7 @@ class Blog extends Component {
     render(){
         const hideCreateButton = this.state.show ? false : true;
         const hideCancelButtonAndForm = this.state.show ? true : false;
+        console.log(this.props);
         return(
             <div id="blog-page">
                 <button className="btn btn-primary" hidden={hideCreateButton} onClick={() => this.setState({show: false})}>Create New Post</button>
