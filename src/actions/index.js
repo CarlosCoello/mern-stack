@@ -5,7 +5,7 @@ export const DELETE_POST = 'DELETE_POST';
 
 export const getPosts = (posts) => {
     return dispatch => {
-        return fetch('http://localhost:2000/blogs/getPosts').then( res => res.json()).then( data => {
+        return fetch('https://shrouded-forest-43181.herokuapp.com/blogs/getPosts').then( res => res.json()).then( data => {
             dispatch({
                 type: GET_POSTS,
                 posts: data.posts
@@ -24,7 +24,7 @@ export const addPost = (blog) => {
         headers: myHeader
     }
     return dispatch => {
-        return fetch('http://localhost:2000/blogs/newPost', options).then( res => res.json()).then(data => {
+        return fetch('https://shrouded-forest-43181.herokuapp.com/blogs/newPost', options).then( res => res.json()).then(data => {
             dispatch({
                 type: ADD_POST,
                 post: data.post
@@ -42,7 +42,7 @@ export const deletePost = (postId) => {
         headers: myHeader
     }
    return dispatch => {
-       return fetch('http://localhost:2000/blogs/deletePost/' + postId, options).then( res => res.json()).then( data => {
+       return fetch('https://shrouded-forest-43181.herokuapp.com/blogs/deletePost/' + postId, options).then( res => res.json()).then( data => {
         dispatch({
             type: DELETE_POST,
             post: data.post
@@ -60,7 +60,7 @@ export const deleteAllPosts = () => {
         headers: myHeader
     }
     return dispatch => {
-        return fetch('http://localhost:2000/blogs/deleteAllPosts', options).then( res => res.json()).then( data => {
+        return fetch('https://shrouded-forest-43181.herokuapp.com/blogs/deleteAllPosts', options).then( res => res.json()).then( data => {
          dispatch({
              type: DELETE_ALL_POSTS,
              posts: data.message 
