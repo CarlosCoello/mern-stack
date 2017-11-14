@@ -14,7 +14,7 @@ module.exports = (router) => {
                     res.send({ success: true, posts: posts });
                 }
             }
-        }).sort({ createdAt: -1 });
+        }).sort({ createdAt: 1 });
     });
     
     router.post('/newPost', (req, res) => {
