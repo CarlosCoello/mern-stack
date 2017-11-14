@@ -54,7 +54,7 @@ class Blog extends Component {
             {
                 blogs.map( (blog) => {
                     return (
-                        <div className="card" key={blog._id + Math.random()} style={marginTB}>
+                        <div className="card" key={JSON.stringify(blog._id) + Math.random()} style={marginTB}>
                             <img className="card-img-top" src={blog.image} alt={blog.title} />
                             <div className="card-body">
                             <h4><strong>{blog.title}</strong></h4>

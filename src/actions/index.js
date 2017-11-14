@@ -1,5 +1,4 @@
 export const GET_POSTS = 'GET_POST';
-export const ADD_POST = 'ADD_POST';
 export const DELETE_ALL_POSTS = 'DELETE_ALL_POSTS';
 export const DELETE_POST = 'DELETE_POST';
 
@@ -24,11 +23,8 @@ export const addPost = (blog) => {
         headers: myHeader
     }
     return dispatch => {
-        return fetch('https://shrouded-forest-43181.herokuapp.com/blogs/newPost', options).then( res => res.json()).then(data => {
-            dispatch({
-                type: ADD_POST,
-                post: data.post
-            })
+        return fetch('https://shrouded-forest-43181.herokuapp.com/blogs/newPost', options).then( res => res.json()).then(() => {
+            dispatch(getPosts());
         })
     }
 }

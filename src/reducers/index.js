@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { GET_POSTS, ADD_POST, DELETE_POST, DELETE_ALL_POSTS } from '../actions';
+import { GET_POSTS, DELETE_POST, DELETE_ALL_POSTS } from '../actions';
 
 const theBlogs = (state = [], action) => {
     let blogs = null;
@@ -7,9 +7,6 @@ const theBlogs = (state = [], action) => {
     switch(action.type){
         case GET_POSTS:
         blogs = action.posts;
-            return blogs;
-        case ADD_POST:
-        blogs = [action.post, ...state];
             return blogs;
         case DELETE_POST:
         blogs = deleteOnePost(state, action.post);
