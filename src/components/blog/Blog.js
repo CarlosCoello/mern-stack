@@ -89,7 +89,7 @@ class Blog extends Component {
                         <input type="text" className="form-control" ref="title" />
                     </div>
                     <div className="form-group">
-                        <label>image: </label>
+                        <label>image url: </label>
                         <input type="text" className="form-control" ref="image" />
                     </div>
                     <div className="form-group">
