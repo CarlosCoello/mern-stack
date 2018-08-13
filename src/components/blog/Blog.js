@@ -94,7 +94,7 @@ class Blog extends Component {
                     </div>
                     <div className="form-group">
                         <label>message: </label>
-                        <textarea rows="5" className="form-control" ref="message"></textarea>
+                        <textarea rows="5" className="form-control" ref="message" placeholder="describe to the viewer what the picture details"></textarea>
                     </div>
                     <div className="form-group">
                         <label>posted by: </label>
