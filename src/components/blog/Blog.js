@@ -75,6 +75,7 @@ class Blog extends Component {
     render(){
         const hideCreateButton = this.state.show ? false : true;
         const hideCancelButtonAndForm = this.state.show ? true : false;
+
         return(
             <div id="blog-page">
                 <button className="btn btn-primary" hidden={hideCreateButton} onClick={() => this.setState({show: false})}>Create New Post</button>
@@ -85,7 +86,7 @@ class Blog extends Component {
                 <form onSubmit={this.handleSubmit} hidden={hideCancelButtonAndForm}>
                     <div className="form-group">
                         <label>title: </label>
-                        <input type="text" className="form-control" ref="title" />
+                        <input type="text" className="form-control" ref="title" placeholder="give your post a title"/>
                     </div>
                     <div className="form-group">
                         <label>image url: </label>
