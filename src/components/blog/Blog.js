@@ -75,7 +75,7 @@ class Blog extends Component {
     render(){
         const hideCreateButton = this.state.show ? false : true;
         const hideCancelButtonAndForm = this.state.show ? true : false;
-
+        console.log(this.props.addPost);
         return(
             <div id="blog-page">
                 <button className="btn btn-primary" hidden={hideCreateButton} onClick={() => this.setState({show: false})}>Create New Post</button>
@@ -98,7 +98,7 @@ class Blog extends Component {
                     </div>
                     <div className="form-group">
                         <label>posted by: </label>
-                        <input type="text" className="form-control" ref="author" />
+                        <input type="text" className="form-control" ref="author" placeholder="who is creating this post? lastname not required"/>
                     </div>
                     <div className="form-group">
                         <input type="submit" className="btn btn-primary" />
