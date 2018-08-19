@@ -5,7 +5,8 @@ export const DELETE_POST = 'DELETE_POST';
 export const getPosts = (posts) => {
     return dispatch => {
         return fetch('https://shrouded-forest-43181.herokuapp.com/blogs/getPosts').then( res => res.json()).then( data => {
-            dispatch({
+            console.log('action ', data);
+           dispatch({
                 type: GET_POSTS,
                 posts: data.posts
             })

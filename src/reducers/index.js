@@ -6,8 +6,9 @@ const theBlogs = (state = [], action) => {
     //state = read_cookie('blogs');
     switch(action.type){
         case GET_POSTS:
+        console.log('reducer ', action.posts);
         blogs = action.posts;
-            return blogs;
+            return [...blogs];
         case DELETE_POST:
         blogs = deleteOnePost(state, action.post);
             return blogs;
